@@ -131,12 +131,11 @@
           <h2>Оставьте заявку</h2>
           <p>Ответим в ближайшее время и предложим оптимальный вариант под вашу задачу.</p>
         </div>
-        <form id="lead-form" class="form" method="POST" action="https://formsubmit.co/yulianaanisimova82@gmail.com">
-          <input type="hidden" name="_subject" value="Заявка с сайта Modex">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://fraktalxcx.github.io/modex-landing/thanks.html">
-          <input type="hidden" name="_template" value="table">
-          <input type="text" name="_honey" style="display:none">
+        <form id="lead-form" class="form" method="POST" action="https://api.web3forms.com/submit">
+          <input type="hidden" name="access_key" value="22d4b8c1-c6ff-4fa5-9ba0-ebfeccca9e3f">
+          <input type="hidden" name="subject" value="Заявка с сайта Modex">
+          <input type="hidden" name="redirect" value="https://fraktalxcx.github.io/modex-landing/thanks.html">
+          <input type="checkbox" name="botcheck" style="display:none">
           <label>Имя<input name="name" type="text" required></label>
           <label>Телефон<input name="phone" type="tel" required minlength="11" maxlength="12" placeholder="+7XXXXXXXXXX"></label>
           <label>Email<input name="email" type="email"></label>
