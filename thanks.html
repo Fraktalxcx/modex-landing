@@ -7,39 +7,76 @@
   <meta name="robots" content="noindex">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/styles.css">
   <style>
-    .thanks-wrap {
-      min-height: 80vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      gap: 16px;
-      padding: 40px 20px;
+    .thanks {
+      min-height: calc(100vh - 150px);
+      display: grid;
+      place-items: center;
+      padding: 40px 0;
     }
-    .thanks-wrap h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); margin: 0; }
-    .thanks-wrap p { font-size: 1.05rem; max-width: 50ch; }
+
+    .thanks__card {
+      width: min(680px, 92%);
+      border-radius: 20px;
+      border: 1px solid rgba(212, 200, 187, 0.9);
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.85), rgba(168, 200, 203, 0.25));
+      box-shadow: 0 24px 38px rgba(42, 23, 23, 0.15);
+      padding: clamp(20px, 3.5vw, 34px);
+      text-align: center;
+    }
+
+    .thanks__card h1 {
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      margin-bottom: 12px;
+    }
+
+    .thanks__card p {
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .thanks__meta {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .thanks__meta span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: color-mix(in oklab, #fff 88%, var(--brand-teal));
+      font-size: .85rem;
+      color: var(--brand-dark);
+    }
   </style>
 </head>
 <body>
-  <header class="topbar">
+  <header class="topbar is-scrolled">
     <div class="container topbar__inner">
       <a class="brand" href="./index.html">
-        <img class="brand__mark" src="./assets/прозрач.svg" alt="" aria-hidden="true" width="32" height="32">
+        <img class="brand__mark" src="./assets/прозрач.svg" alt="" aria-hidden="true" width="34" height="34">
         <span class="brand__text">МОДЕКС</span>
       </a>
     </div>
   </header>
 
-  <main>
-    <div class="thanks-wrap">
-      <h1>Заявка отправлена</h1>
-      <p>Спасибо! Мы получили вашу заявку и свяжемся с вами в ближайшее время.</p>
-      <a class="btn" href="./index.html">Вернуться на сайт</a>
-    </div>
+  <main class="thanks">
+    <article class="thanks__card">
+      <p class="eyebrow">ЗАЯВКА ПРИНЯТА</p>
+      <h1>Спасибо! Мы получили ваши данные.</h1>
+      <p>Команда Modex свяжется с вами в ближайшее время, уточнит детали и предложит оптимальный модуль под ваш сценарий.</p>
+      <a class="btn" href="./index.html">Вернуться на главную</a>
+      <div class="thanks__meta">
+        <span>Ответ в рабочее время</span>
+        <span>Подбор S / M / L</span>
+        <span>Прозрачная смета</span>
+      </div>
+    </article>
   </main>
 
   <footer class="footer">
